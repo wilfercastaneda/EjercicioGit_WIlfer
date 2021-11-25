@@ -1,0 +1,45 @@
+Ejercicio de ordenar de Mayor a Menor
+<script>
+var inicio = ["unacadena",3,9,1,10,500,1,10,"a",true];  
+var Numero = [];
+var contposi= 0;
+
+
+for (var i = 0; i < inicio.length; i++) {
+    //console.log(typeof inicio[i]);
+        
+        if (typeof inicio[i] === 'number' ){
+           
+           Numero[contposi] = inicio[i];
+           contposi ++ 
+        
+       }
+    }
+ //console.log(Numero);
+
+  var longitud = Numero.length;
+  var countpositio = 0;
+  var mayor = 0;
+
+  while (countpositio < longitud){
+
+    for(var j = 0; j < longitud; j ++ ){
+
+        if (Numero[j] < Numero[j + 1]){
+           
+            mayor = Numero[j + 1];
+            Numero[j + 1] = Numero[j]; 
+            Numero[j] = mayor;
+
+        }
+          
+    }
+
+    countpositio ++
+
+
+  }
+
+  console.log(Numero);
+
+</script>
