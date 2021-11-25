@@ -1,0 +1,111 @@
+<script>
+// PUnto 1
+
+var numero1 = 5;
+var numero2 = 8;
+
+if(numero1 < numero2) {
+console.log("numero1 no es mayor que numero2");
+}
+if(numero2 >= 0) {
+console.log("numero2 es positivo");
+}
+if(numero1 < 0) {
+console.log("numero1 es negativo o distinto de cero");
+}
+if(numero1 + 1 != numero2) {
+console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+
+}
+
+//*****************************************************************************************************************
+// Punto 2 Factoril
+
+var numero = 1
+var Factorial = 5;
+
+for (var i = 1; i <= Factorial ; i ++  ){
+
+    numero *= i;
+}
+
+console.log(numero);
+
+//*****************************************************************************************************************
+// Punto 3 primera funcion
+
+
+let funcion = primerafuncion(5);
+
+function primerafuncion (a){
+ 
+  if ((a%2) != 0){
+                      
+      console.log("el numero es par  " + a);
+      
+  }else{
+
+    console.log(" el numero es impar  " + a);
+       }
+ return (primerafuncion);
+}
+
+
+
+//*****************************************************************************************************************
+// Punto 4 Polindromo
+
+String var frase = "La ruta nos aporto otro paso natura";
+
+
+frase = frase.toLowerCase().replace("","").replace(",","");
+var numero = 0, tamaño = frase.length()-1;
+var falla = false; 
+
+while ((numero < tamaño) && !falla){
+
+      if (frase.charAt(numero)== frase.charAt(tamaño)){
+        numero ++;
+        tamaño --;
+      }else{
+
+        falla = true;
+      }
+}
+
+if (!falla){
+    console.log(" es un polindromo  " + frase);
+}else{
+    console.log(" no es un polindromo  " + frase);
+}
+//*****************************************************************************************************************
+// Punto 5 
+
+class Persona { 
+nombre;
+edad;
+
+    obtDetalles(){
+    
+        return 0;
+}
+constructor (nombre,edad){
+    this.nombre = nombre;
+    this.edad = edad;
+    console.log ("las personas se llama  " + this.nombre + "y su edad es " + this.edad);
+}
+
+}
+class studiante {
+
+
+}
+
+let persona1 = new Persona();
+
+
+</script> 
+
+
+//Nota PRofe no es excusa pero por temas laboral solo pude estar 1 hora concentrado en el ejercicio. espero poder
+repetirlo para poder avanzar en el curso 
