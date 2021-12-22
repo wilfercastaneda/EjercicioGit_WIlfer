@@ -1,0 +1,160 @@
+<script>
+//Punto 1 Random par o impar(10 ptos).
+
+function parimpar(numeros) {
+
+    let result;
+
+        if (numeros % 2 === 0) {
+
+            result = " Es par";
+
+        } else {
+
+            result = " Es impar";
+
+        }
+
+    return result;
+    }
+    let iteracion = 0;
+    while (iteracion < 5)
+    {
+    numeros = (Math.random()*100);
+    console.log("Numero generado en la itereacion " + iteracion + " es " + parimpar(numeros));
+    iteracion++;
+    }
+
+
+//punto 3 Cuenta cuantas veces se repite un caracter en especifico (20 ptos).
+
+let valor = contcaract('espero ganar este examen','e');
+console.log(valor);
+function contcaract (str,rep){
+
+//var cadena = "Cuantas 'e' aparecen en esta cadena."
+var cadena = str;
+var cursor = [];
+for(var i = 0; i < cadena.length; i++) {
+	if (cadena[i].toLowerCase() === rep) cursor.push(i);
+}
+  return console.log("El caracter " + '"' + rep + '"' + " se repite " + cursor.length + " veces " + " en la cadena " + '"' + str + '"');
+}
+
+
+//PUnto 5 Nuevos jugadores (50 ptos).
+
+
+//Clase persona con propiedades nombre, apellido y edad.
+class Persona {
+    nombre;
+    apellido;
+    edad;
+    constructor (nombre,apellido,edad){
+     this.nombre = nombre;
+     this.apellido = apellido;
+     this.edad = edad;
+    }
+
+    getDatalle (){
+      console.log(this.nombre);
+      console.log(this.apellido);
+      console.log(this.edad);
+    }
+}
+class Jugador extends Persona{
+     posicion;
+     constructor (nombre,apellido,edad,posicion){
+         super(nombre,apellido,edad);
+         this.posicion = posicion;
+     }
+     getDetalle (){
+        console.log(this.nombre);
+        console.log(this.apellido);
+        console.log(this.edad);
+        console.log(this.posicion);
+     }
+   } 
+
+   class Entrenador extends Persona{
+    experiencia;
+    idfederacion;
+    constructor (nombre,apellido,edad,experiencia,idfed = Math.floor(Math.random() * 90000) + 10000){
+        super(nombre,apellido,edad);
+        this.experiencia = experiencia;
+        this.idfederacion = idfed;
+    }
+    getDetalle (){
+       console.log(this.nombre);
+       console.log(this.apellido);
+       console.log(this.edad);
+       console.log(this.posicion);
+       console.log(this.experiencia);
+       console.log(this.idfederacion);
+    }
+   }
+    
+   class Equipo {
+        director;
+        jugadores=[];
+           constructor (director,jugadores) {
+            this.director = director;
+            this.jugadores = jugadores;
+        }
+        getDetalles() {
+            console.log(this.director);
+            console.log(this.jugadores);
+        }
+
+        addJuagadores(jugadores) {
+                this.jugadores.push(jugadores);
+            }
+
+        }
+  
+const Mauro = new Jugador('Mauro','Castaneda',37,'Arquero');
+console.log(Mauro);
+const Alex = new Jugador('Alex','Perez',23,'Defensa');
+console.log(Alex);
+const Alejandro = new Jugador('Alejandro','Arias',23,'Volante');
+console.log(Alejandro);
+const Carlos = new Jugador('Carlos','Gomez',17,'Delantero');
+console.log(Carlos);
+const Dora = new Entrenador('Dora','Tobon', 43,10);
+console.log(Dora);
+
+const Equipo1 = new Equipo(Dora, Array(Mauro, Alex,Alejandro,Carlos));
+console.log(Equipo1);
+
+Equipo1.addJuagadores(Mauro, Alex, Alejandro, Carlos);
+
+Mauro.getDatalle();
+Dora.getDatalle();
+Equipo1.getDetalles(Equipo1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
