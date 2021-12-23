@@ -24,6 +24,34 @@ function parimpar(numeros) {
     console.log("Numero generado en la itereacion " + iteracion + " es " + parimpar(numeros));
     iteracion++;
     }
+// Punto 2 Múltiplos de un número dado (10 ptos).
+
+function Multiplo (numero,multiplo){
+
+    valor = numero % multiplo;
+
+    if (valor == 0){
+    
+        return true;
+
+    }else{
+
+        return false;
+    }
+}
+
+var entero = 5;
+var arrayEntero = [];
+
+for (var  i; i < 100; i ++){
+
+
+    if (Multiplo (i,entero)){
+         
+        arrayEntero.push(i);
+    }
+}
+console.log("los multiplos de " + entero + "  son " + arrayEntero);
 
 
 //punto 3 Cuenta cuantas veces se repite un caracter en especifico (20 ptos).
